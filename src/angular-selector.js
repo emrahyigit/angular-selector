@@ -140,7 +140,7 @@
 					else scope.value = scope.valueAttr == null ? (value || []) : (value || []).map(function (option) { return scope.getObjValue(option, scope.valueAttr); });
 				};
 				scope.hasValue = function () {
-					return scope.multiple ? (scope.value || []).length > 0 : !!scope.value;
+					return scope.multiple ? (scope.value || []).length > 0 : scope.value != null;
 				};
 				
 				// Remote fetching
